@@ -1,0 +1,95 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+.sky{
+    background-image: url(background.jpg);
+    position: absolute;
+    background-repeat: repeat-x;
+    /* background-size: cover; */
+    height: 100vh;
+    width: 1000vw;
+    animation: skymove  linear 20s infinite;
+}
+.trees
+{
+    background-image: url(trees.png);
+    position: absolute;
+    top: -110px;
+    background-repeat: repeat-x;
+    /* background-size: cover; */
+    height: 100vh;
+    width: 1000vw;
+    z-index: 5;
+    animation: treemove  linear 30s infinite;
+} 
+.track{
+    background-image: url(track.png);
+    position: absolute;
+    bottom: 0%;
+    background-repeat: repeat-x;
+    /* background-size: cover; */
+    height: 20vh;
+    width: 800vw;
+    animation: trackmove  linear 10s infinite;
+    overflow: hidden;
+}
+.car{
+    background-image: url(car_body.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100px;
+    width: 300px;
+    bottom: 18vh;
+    left: 444px;
+    z-index: 12;
+}
+.leftwheel
+    {
+        background-image: url(car_wheel_left.png);
+        background-size: cover;
+        height: 63px;
+        width: 63px;
+        position: absolute;
+        left: 42px;
+        bottom: -1px;
+        animation: movingwheel  linear 0.6s infinite;
+    }
+    .rightwheel{
+        background-image: url(car_wheel_right.png);
+        background-size: cover;
+        height: 63px;
+        width: 63px;
+        left: 222px;
+        bottom: -1px;
+        position: absolute;
+        animation: movingwheel  linear 0.6s infinite;
+    }
+    @keyframes movingwheel{
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes trackmove{
+        100%{
+            transform: translateX(-500vw);
+        }
+    }
+    @keyframes skymove{
+        100%{
+            transform: translateX(-500vw);
+        }
+    }
+    @keyframes treemove{
+        100%{
+            transform: translateX(-500vw);
+        }
+    }
